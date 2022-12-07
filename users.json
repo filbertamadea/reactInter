@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "email": "filbert@email.com",
+      "password": "$2a$10$gSVJiloZprsPBcVoR8IAqe6l9FqBGMgs4IA.hNtNElEz4cwvDjLXi",
+      "id": 1
+    },
+    {
+      "email": "filbertamadea@gmail.com",
+      "password": "$2a$10$haoTuKpmBbZ11xY1VtPHxO4zNZuNKdW5jDm297gevRXO/EZOm/qba",
+      "username": "filbertam",
+      "fullName": "Filbert Amadea",
+      "userGroup": "basic",
+      "id": 2
+    },
+    {
+      "email": "melody@gmail.com",
+      "password": "$2a$10$DABLXrr5Woa4n9.886mMoePhoJ1yW76a6HSu1NQZlK.qWxamglYMe",
+      "username": "melodi",
+      "fullName": "melodi nicole",
+      "userGroup": "basic",
+      "id": 3
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$ysJLlfjvSTRFK7KR7ieEFuj6b/0/4C.GWSUJOljJmBgFJJvlhDem2",
+      "username": "admin",
+      "fullName": "adminadmin",
+      "userGroup": "admin",
+      "id": 4
+    },
+    {
+      "email": "testing@gmail.com",
+      "password": "$2a$10$d5KByCeLhVCKIe1um/s3RuKx9jEuMP5.pirNGFG5g2VUgtqSap3Ja",
+      "username": "testing",
+      "fullName": "testing123",
+      "userGroup": "basic",
+      "id": 5
+    },
+    {
+      "email": "filbertam@gmail.com",
+      "password": "$2a$10$RNy3/jdw.CVfjohpCYIfK.sQb9bwM4VRASEoxbkadteHw1AbXdm1q",
+      "username": "f",
+      "fullName": "f",
+      "userGroup": "basic",
+      "id": 6
+    },
+    {
+      "email": "filberta@gmail.com",
+      "password": "$2a$10$eJdSY8HKVwwtHG9sghQK/uqa5SZPrPw3e9PP91Vz4MoWhbiH..X6e",
+      "username": "wwww",
+      "fullName": "wwww",
+      "userGroup": "basic",
+      "id": 7
+    }
+  ]
+}
