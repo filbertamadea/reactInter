@@ -76,6 +76,22 @@
       "fullName": "filbert baru",
       "userGroup": "basic",
       "id": 10
+    },
+    {
+      "email": "aa@gmail.com",
+      "password": "$2a$10$mQG3FrPaAB.PVEONj0peseqHfS5UQ8FdVPLWtZLkZ1zM22COCKyt2",
+      "username": "aaaa",
+      "fullName": "aaaa",
+      "userGroup": "basic",
+      "id": 11
+    },
+    {
+      "email": "contoh@gmail.com",
+      "password": "$2a$10$wXL2FokQsS1/VgbDEMzB/OjceQxeOnyTbxS1qKOLtFhdy5A/5.xs6",
+      "username": "contoh",
+      "fullName": "contoh",
+      "userGroup": "basic",
+      "id": 12
     }
   ]
 }

@@ -37,12 +37,11 @@ function Register() {
                 try {
                     let response = await axios.post(`${API_URI}/register`, dataRegister);
                     setPesan("")
-                    console.log(response);
+                    navigate('/login')
 
                 } catch (error) {
                     let pesan = error?.response?.data
                     setPesan(pesan)
-                    console.log(pesan);
                 }
             } else {
                 setPesan("Fullname terlalu pendek")
@@ -50,7 +49,7 @@ function Register() {
         } else {
             setPesan("Username Terlalu Pendek")
         }
-        navigate('/login')
+        
     }
     return (
         <Grid item container direction="row">
