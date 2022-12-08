@@ -50,7 +50,7 @@ function Register() {
         } else {
             setPesan("Username Terlalu Pendek")
         }
-        console.log(uname.length);
+        navigate('/login')
     }
     return (
         <Grid item container direction="row">

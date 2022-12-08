@@ -12,6 +12,8 @@ import { useDispatch } from 'react-redux';
 import { axiosGet } from '../../utilities/Fetch';
 
 const API_URI = process.env.REACT_APP_BASEURL
+const token = localStorage.getItem("token")
+const userG = localStorage.getItem("userGroup")
 
 function Detail(props) {
     const dispatch = useDispatch();
@@ -31,11 +33,11 @@ function Detail(props) {
         dispatch(getData())
     }, [])
 
-    console.log(123, book);
     let idBuku = id
     let urlImage = book?.urlImage
     let textNama = book?.nama
     let textDeskripsi = book?.deskripsi
+    let flagFile = book?.flagFile
 
     const handleBalik = () => {
         navigate('/');
@@ -73,34 +75,41 @@ function Detail(props) {
                         zIndex: '1001',
                         // borderRadius: '150px',
                     }} />
-                <Typography
-                    onClick={handleOpenEdit}
-                    variant="h2"
-                    style={{
-                        position: 'relative',
-                        zIndex: '1001',
-                        marginTop: '-9%',
-                        marginLeft: '90%',
-                        textAlign: 'right',
-                        color: '#000',
-                        right: '12%',
-                        width: '150px'
-                        
-                    }} >  Edit</Typography>
-                    <Typography
-                    onClick={handleOpenDelete}
-                    variant="h2"
-                    style={{
-                        position: 'relative',
-                        zIndex: '1001',
-                        textAlign: 'right',
-                        color: '#000',
-                        marginTop: '-3.7%',
-                        right: '2%',
-                        marginLeft: '90%',
-                        width: '150px'
-                        
-                    }} >  Delete</Typography>
+                {
+                    token !== null && userG === 'admin' ?
+                        (<>
+                            <Typography
+                                onClick={handleOpenEdit}
+                                variant="h2"
+                                style={{
+                                    position: 'relative',
+                                    zIndex: '1001',
+                                    marginTop: '-6%',
+                                    marginLeft: '90%',
+                                    textAlign: 'right',
+                                    color: '#000',
+                                    right: '12%',
+                                    width: '150px'
+
+                                }} >  Edit</Typography>
+                            <Typography
+                                onClick={handleOpenDelete}
+                                variant="h2"
+                                style={{
+                                    position: 'relative',
+                                    zIndex: '1001',
+                                    textAlign: 'right',
+                                    color: '#000',
+                                    marginTop: '-3.7%',
+                                    right: '2%',
+                                    marginLeft: '90%',
+                                    width: '150px'
+
+                                }} >  Delete</Typography>
+                        </>)
+                        :
+                        (<></>)
+                }
                 <Box
                     component="img"
                     sx={{
@@ -178,23 +187,24 @@ function Detail(props) {
                     }}>
                     30 Juni 2019
                 </Typography>
-                <Typography variant="h5" color="initial"
-                    style={{
-                        marginTop: '30px',
-                        marginLeft: '6%',
+            </Grid>
+            <Grid container sx={{maxWidth: '60%',marginLeft: '6%',}}>
+                <Typography variant="body2" gutterBottom color="initial"
+                    sx={{
+                        marginTop: '2px',
                         borderRadius: '6px',
-                        width: '65%'
+                        fontSize: '40px'
                     }}>
                     {textDeskripsi}
                 </Typography>
             </Grid>
-            <Button style={{ backgroundColor : '#F4CF5D' , width: '10%', height: '100%', right: '-80%', marginTop: '5%' }} variant="contained" size="large" >
-                            <Typography variant="h6" color="#fff">
-                                Borrow
-                            </Typography>
-                        </Button>
-            <ModalEditBook open={openEdit} handleClose={handleCloseEdit} urlImage={urlImage} textNama={textNama} textDeskripsi={textDeskripsi} idBuku={idBuku}/>
-            <ModalDeleteBook open={openDelete} handleClose={handleCloseDelete} urlImage={urlImage} textNama={textNama} textDeskripsi={textDeskripsi} idBuku={idBuku}/>
+            <Button style={{ backgroundColor: '#F4CF5D', width: '10%', height: '100%', right: '-80%', marginBottom:'10%'}} variant="contained" size="large" >
+                <Typography variant="h6" color="#fff">
+                    Borrow
+                </Typography>
+            </Button>
+            <ModalEditBook open={openEdit} handleClose={handleCloseEdit} urlImage={urlImage} textNama={textNama} textDeskripsi={textDeskripsi} idBuku={idBuku} valueFlagFile={flagFile} />
+            <ModalDeleteBook open={openDelete} handleClose={handleCloseDelete} urlImage={urlImage} textNama={textNama} textDeskripsi={textDeskripsi} idBuku={idBuku} />
         </div>
     )
 }

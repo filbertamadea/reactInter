@@ -8,7 +8,7 @@ import Radio from '@mui/material/Radio';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDataBooks } from '../../books/books';
 import { axiosGet, axiosPost, axiosPut } from '../../utilities/Fetch'
-
+const userG = localStorage.getItem("userGroup")
 
 function ModalAddBook({ open, handleClose }) {
     const dispatch = useDispatch();
@@ -22,11 +22,13 @@ function ModalAddBook({ open, handleClose }) {
 
     const getDataLastBooks = () => {
         return async (dispatch) => {
-            try {
-                const data = await axiosGet(`books?_sort=id&_order=desc&_limit=1`)
-                setBook(data)
+            if(userG === 'admin'){
+                try {
+                    const data = await axiosGet(`books?_sort=id&_order=desc&_limit=1`)
+                    setBook(data)
+                }
+                catch (e) { throw e }
             }
-            catch (e) { throw e }
         }
     }
 

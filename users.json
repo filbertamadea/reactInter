@@ -52,6 +52,30 @@
       "fullName": "wwww",
       "userGroup": "basic",
       "id": 7
+    },
+    {
+      "email": "filbert@gmail.com",
+      "password": "$2a$10$ALZ7Xmi8M15P9dxd2kCjWuyzQRFfVbQIiv/HWodufB1gpZVC2Ltni",
+      "username": "filbertamadea",
+      "fullName": "Filbert amadea dea",
+      "userGroup": "basic",
+      "id": 8
+    },
+    {
+      "email": "aaaaaaaaaaaaa@gmail.com",
+      "password": "$2a$10$xWZ9sx1N/egpCiCzp1eDuORR2QIw8LCATLZAdBmKstZ9v2ZfwuxrW",
+      "username": "aaaaaaaaaaa",
+      "fullName": "aaaaaaaaa",
+      "userGroup": "basic",
+      "id": 9
+    },
+    {
+      "email": "filbertbaru@gmail.com",
+      "password": "$2a$10$8qxWfdF8GZ7i7bY1OqISb.NUAY9wMl8ATBMSN2MYdtjftAw2JOQsS",
+      "username": "filbertbaru",
+      "fullName": "filbert baru",
+      "userGroup": "basic",
+      "id": 10
     }
   ]
 }
